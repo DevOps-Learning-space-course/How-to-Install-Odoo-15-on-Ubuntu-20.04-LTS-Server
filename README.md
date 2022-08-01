@@ -32,7 +32,7 @@ sudo npm install -g less less-plugin-clean-css
 
 sudo apt-get install -y node-less
 
-Step 4: Setup Database Server(PostgreSQL)
+<h1>Step 4: Setup Database Server(PostgreSQL)</h1>
 Odoo uses PostgreSQL as its database server. Follow the steps to install and setup database server for Odoo:
 
 
@@ -68,7 +68,7 @@ Exit from psql and Postgres user:
 exit
 
 
-Step 5: System User
+<h1>Step 5: System User</h1>
 
 Next let's create a system user to perform Odoo roles and also for security purposes. All the files and directories of Odoo’s access and operations will be limited for this user. 
 Now let us create a new system user for the Odoo service and further then we will limit the permissions of all Odoo related files and directories for this specific user.
@@ -77,7 +77,7 @@ Now let us create a new system user for the Odoo service and further then we wil
 sudo adduser --system --home=/opt/odoo --group odoo
 
 
-Step 6: Clone Odoo Source from Github Repository
+<h1>Step 6: Clone Odoo Source from Github Repository</h1>
 
 With the Community Edition source code, we can directly clone from Odoo’s GitHub repository. You can add the Enterprise edition add-ons after the installation process is completed.
 So first install git to the server:
@@ -96,7 +96,7 @@ git clone https://www.github.com/odoo/odoo --depth 1 --branch 15.0 --single-bran
 exit
 
 
-Step 7: Install Required Python Packages
+<h1>Step 7: Install Required Python Packages</h1>
 The next step is to install the required packages. All the packages are listed in the requirement.txt file. Therefore, we can easily install these packages with a single command:
 
 sudo pip3 install -r /opt/odoo/requirements.txt
@@ -107,7 +107,7 @@ To run Odoo smoothly, all the packages should be installed properly and you shou
 
 
 
-Step 8: Install Wkhtmltopdf
+<h1>Step 8: Install Wkhtmltopdf</h1>
 Odoo supports printing reports as PDF files. Wkhtmltopdf helps to generate PDF reports from HTML data format. Moreover, the Qweb template reports are converted to HTML format by the report engine and Wkhtmltopdf will produce the PDF report:
 
 
@@ -118,7 +118,7 @@ sudo dpkg -i wkhtmltox_0.12.5-1.bionic_amd64.deb
 
 sudo apt install -f
 
-Step 9: Setup Conf file
+<h1>Step 9: Setup Conf file</h1>
 Next, we have to configure the conf file for Odoo which contains certain necessary information such as the addons path, database-related parameters, proxy parameters, and many more. 
 Therefore, you should create a configuration file inside the /etc directory. There is a sample conf file inside Odoo’s source, in the Debian directory. To copy from Debian to the /etc directory use the following command:
 
@@ -153,7 +153,7 @@ sudo mkdir /var/log/odoo
 sudo chown odoo:root /var/log/odoo
 
 
-Step 10: Odoo service file
+<h1>Step 10: Odoo service file</h1>
 Finally, we have to create a service to run Odoo. Let’s create a service file ‘odoo.service’ in /etc/systemd/system:
 
 
@@ -180,7 +180,7 @@ sudo chmod 755 /etc/systemd/system/odoo.service
 
 sudo chown root: /etc/systemd/system/odoo.service
 
-Step 11: Test Odoo 15
+<h1>Step 11: Test Odoo 15</h1>
 Now all the steps of installation are completed. Let's test the Odoo instance with the following command:
 
 sudo systemctl start odoo.service
