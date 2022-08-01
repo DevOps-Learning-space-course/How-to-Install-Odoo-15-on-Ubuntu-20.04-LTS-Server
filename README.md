@@ -1,17 +1,15 @@
-# How-to-Install-Odoo-15-on-Ubuntu-20.04-LTS-Server
-
-
+How to Install Odoo 15 on Ubuntu 20.04 LTS Server
 
 sudo apt-get update
 sudo apt-get upgrade
 
 
-Step 2: Secure Server
+<h1>Step 2: Secure Server</h1>
 Ensure the system is secure from ssh attacks, the use of Fail2ban will help to prevent ssh attacks:
 
-sudo apt-get install openssh-server fail2ban
+<h4>sudo apt-get install openssh-server fail2ban</h4>
 
-Step 3: Install Python 3 and its Dependencies
+<h1>Step 3: Install Python 3 and its Dependencies</h1>
 
 Install the required python packages for Odoo:
 Install pip3:
