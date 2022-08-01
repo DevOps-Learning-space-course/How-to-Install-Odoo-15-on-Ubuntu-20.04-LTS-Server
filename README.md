@@ -160,7 +160,7 @@ Finally, we have to create a service to run Odoo. Let’s create a service file 
 
 sudo nano /etc/systemd/system/odoo.service
 
-[Unit]
+<h5>[Unit]
    Description=Odoo
    Documentation=http://www.odoo.com
    [Service]
@@ -169,7 +169,7 @@ sudo nano /etc/systemd/system/odoo.service
    User=odoo
    ExecStart=/opt/odoo/odoo-bin -c /etc/odoo.conf
    [Install]
-   WantedBy=default.target
+   WantedBy=default.target</h5>
 
 
 
